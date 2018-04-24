@@ -1,6 +1,6 @@
 #include <iostream>
-#include "lookup_gen.h"
 #include <math.h>
+
 using namespace std;
 
 constexpr int fib(const int i)
@@ -15,10 +15,6 @@ constexpr int fib(const int i)
 }
 int main()
 {
-    const std::array<uint16_t, 2048> lookup_table = lookup_table_expand<uint16_t, 2048>::values;
-    for(int i: lookup_table)
-        cout << i << " ";
-    cout << fib(2);
-    
+    cout << fib(2); 
     return 0;
 }
